@@ -40,7 +40,7 @@ const ProductsPage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, idx) => (
-            <div key={idx} className="bg-header p-6 rounded-lg shadow-md border border-fore group hover:border-amber-500 transition-all" data-aos="fade-up" data-aos-delay={200}>
+            <div key={idx} className="bg-header p-6 rounded-lg shadow-md border border-fore/10 group hover:border-amber-500 transition-all" data-aos="fade-up" data-aos-delay={200}>
               <div className="h-48 bg-back/10 rounded-md mb-6 flex items-center justify-center relative overflow-hidden">
                 <span className="absolute top-2 right-2 bg-amber-500 text-xs font-bold px-2 py-1 rounded text-blue-900 uppercase z-20">
                   {product.tag}
