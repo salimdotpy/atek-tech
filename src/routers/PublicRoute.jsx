@@ -32,7 +32,7 @@ const PublicRoute = () => {
       <nav className={`fixed w-full z-[500] transition-all duration-300 bg-blue-900 lg:bg-blue-900 py-3`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
-          <img src={logo} className="w-24 md:w-32 h-auto cursor-pointer" onClick={() => navigate('/')} />
+          <img src={logo} className="w-8 md:w-14 h-auto cursor-pointer" onClick={() => navigate('/')} />
           
           {/* Desktop Menu */}
         <List className="!bg-transparent !hidden lg:!flex flex-row  items-center gap-8">

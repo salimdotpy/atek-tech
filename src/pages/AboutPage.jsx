@@ -11,7 +11,7 @@ const AboutPage = () => {
           <div className="md:w-1/2 px-4">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-amber-500 rounded-tl-3xl z-0"></div>
-              <div className="relative hiden z-10 bg-header rounded-xl p-8 h-80 flex items-center justify-center border-2 border-red-500">
+              <div className="relative hiden z-10 bg-header rounded-xl p-8 h-80 flex items-center justify-center border-2 border-fore/10">
                 <div className="text-center">
                   <img src={logo} className="w-80"/>
                 </div>

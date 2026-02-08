@@ -27,10 +27,11 @@ import {
   AlertTriangle,
   ClipboardList
 } from 'lucide-react';
-import { Button } from "@material-tailwind/react";
+import { Button, Avatar } from "@material-tailwind/react";
 import { Link, useNavigate } from 'react-router-dom';
 import { SectionHeader } from '@/ui/sections';
 import Slider from 'react-slick';
+import logo from '../assets/atek_logo.png';
 
 const ServiceCard = ({ icon: Icon, title, description, onClick }) => (
   <div 
