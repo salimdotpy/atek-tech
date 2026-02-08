@@ -45,8 +45,8 @@ The platform is designed to showcase services, build customer trust, and generat
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/<your-username>/atek-technologies.git
-cd atek-technologies
+git clone https://github.com/<your-username>/atek-tech.git
+cd atek-tech
 ```
 
 2. **Install Dependencies**
