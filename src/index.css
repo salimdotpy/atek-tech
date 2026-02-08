@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  ::selection {
+    @apply text-white;
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity, 1));
+  }
+
+  .naira::before {
+    content: 'N';
+    @apply decoration-double line-through;
+  }
+
+  .slider-container button::before {
+    @apply rounded-full border bg-white text-primary text-2xl leading-none flex items-center justify-center size-full; 
+  }
+}
+
+@layer base {
+  :root {
+    --color-primary: 245 158 11;
+    --color-secondary: 37 99 235;
+    --bg-color: 249 250 252;
+    --text-color: 62 89 77;
+    --header-bg: 255 255 255;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  /* Dark theme */
+  .dark {
+    --color-primary: 251 191 36;
+    --color-secondary: 96 165 250;
+    --bg-color: 11 15 25;
+    --text-color: 232 234 236;
+    --header-bg: 17 24 39;
+  }
+
+  /* Dark theme based on system preference */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: 251 191 36;
+      --color-secondary: 96 165 250;
+      --bg-color: 11 15 25;
+      --text-color: 232 234 236;
+      --header-bg: 17 24 39;
+    }
+  }
+
+  body {
+    background-color: rgb(var(--bg-color));
+    color: rgb(var(--text-color));
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--text-color) / 0.2);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--text-color) / 0.5);
+  }
+}
