@@ -199,11 +199,11 @@ const HomePage = () => {
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
               Your Trusted Partner in <span className="text-amber-400">Security & Power</span> Solutions
             </h1>
-            <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl" data-aos="zoom-in-right">
               From advanced CCTV surveillance and solar power systems to precision electronics repair. We secure your world and keep you powered up.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-primary normal-case self-start" onClick={() => navigate('/contact')}>
+              <Button className="bg-primary normal-case self-start" onClick={() => navigate('/contact')} data-aos="flip-right">
                 Get a Free Quote
               </Button>
               <Button onClick={() => navigate('/ai-tools')} variant="ai" className="fle items-center justify-center gap-2 !hidden">
@@ -224,7 +224,7 @@ const HomePage = () => {
               { label: "Support Available", value: "24/7" },
               { label: "Client Satisfaction", value: "100%" }
             ].map((stat, idx) => (
-              <div key={idx}>
+              <div key={idx} data-aos="fade-up" data-aos-delay={100}>
                 <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">{stat.value}</div>
                 <div className="text-fore/60 font-medium">{stat.label}</div>
               </div>

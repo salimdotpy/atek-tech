@@ -20,12 +20,22 @@ function App() {
   const { theme } = useTheme();
 
   useEffect(() => {
-    AOS.init({
+   /* AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      once: true,
-      mirror: false
+      once: false,
+      mirror: true,
+    });*/
+    
+    AOS.init({
+      once: false,
+      mirror: true,
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-out",
     });
+    
+    AOS.refresh();
   }, []);
 
   return (

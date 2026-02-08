@@ -20,18 +20,18 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Securing Africa's Future with Technology</h3>
-            <p className="text-gray-600 mb-4 leading-relaxed">
+            <h3 className="text-2xl font-bold text-fore mb-4">Securing Africa's Future with Technology</h3>
+            <p className="text-fore/60 mb-4 leading-relaxed">
               ATEK Technologies was founded with a single mission: to provide accessible, high-quality security and power solutions to businesses and households. We understand the unique challenges of our environment, which is why we specialize in robust systems that stand the test of time.
             </p>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-fore/60 mb-6 leading-relaxed">
               From securing your perimeter with advanced CCTV to ensuring your business never stops with our solar inverters, we are dedicated to excellence. Our team consists of highly trained engineers and technicians who are passionate about what they do.
             </p>
             
             <div className="grid md:grid-cols-2 gap-4 mt-8">
               <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-900">
                 <h4 className="font-bold text-blue-900">Our Vision</h4>
-                <p className="text-sm text-gray-600">To be the #1 security tech provider in the region.</p>
+                <p className="text-sm text-fore/60">To be the #1 security tech provider in the region.</p>
               </div>
               <div className="p-4 bg-amber-50 rounded-lg border-l-4 border-amber-500">
                 <h4 className="font-bold text-blue-900">Our Mission</h4>
