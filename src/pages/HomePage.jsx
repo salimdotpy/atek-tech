@@ -124,7 +124,8 @@ const testimonials = [
 const HomePage = () => {
   const navigate = useNavigate();
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -139,6 +140,8 @@ const HomePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          dots: true,
+          arrows: true,
         }
       },
       {
@@ -146,6 +149,8 @@ const HomePage = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: true,
+          arrows: true,
         }
       },
       {
@@ -153,8 +158,6 @@ const HomePage = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
-          arrows: false,
         }
       }
     ]
