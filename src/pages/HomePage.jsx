@@ -1,40 +1,19 @@
-import { 
-  Shield, 
-  Camera, 
-  MapPin, 
-  Zap, 
-  Battery, 
-  Smartphone, 
-  Tv, 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  Map, 
-  CheckCircle,
-  Facebook,
-  Twitter,
-  Instagram,
-  ArrowRight,
-  Sun,
-  Flame,
-  Wrench,
-  Sparkles,
-  MessageSquare,
-  Send,
-  Loader,
-  Lightbulb,
-  AlertTriangle,
-  ClipboardList
-} from 'lucide-react';
-import { Button, Avatar } from "@material-tailwind/react";
-import { Link, useNavigate } from 'react-router-dom';
+import heroIntro from '@/assets/hero.mp4';
 import { SectionHeader } from '@/ui/sections';
+import { Button } from "@material-tailwind/react";
+import {
+  ArrowRight,
+  Camera,
+  CheckCircle,
+  MapPin,
+  Shield,
+  Sun
+} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
-import logo from '../assets/atek_logo.png';
 
 const ServiceCard = ({ icon: Icon, title, description, onClick }) => (
-  <div 
+  <div
     onClick={onClick}
     className="bg-header text-fore p-8 rounded-xl shadow-lg border-b-4 border-amber-500 hover:shadow-2xl transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay={300}
   >
@@ -52,18 +31,13 @@ const ServiceCard = ({ icon: Icon, title, description, onClick }) => (
 const TestimonialCard = ({ name, title, quote, imageUrl }) => {
   return (
     <div className="flex flex-col justify-between p-8 bg-header shadow-lg rounded-lg transform transition duration-500 hover:scale-105">
-      <p className="text-fore/60 hidden mb-6 italic">
-        <span className="text-primary font-serif text-5xl leading-none">"</span>
-        {quote}
-        <span className="text-primary text-5xl">"</span>
-        </p>
-        <blockquote className="relative p-2 mb-6 italic text-fore/70
+      <blockquote className="relative px-0 py-7 mb-6 italic text-fore/70
         before:content-['\201C'] before:absolute before:-top-4 before:-left-2 
         before:text-6xl before:font-black before:text-primary
         after:content-['\201D'] after:absolute after:-bottom-10 after:right-4 
         after:text-6xl after:font-black after:text-primary">
-          {quote}
-        </blockquote>
+        {quote}
+      </blockquote>
 
       <div className="flex items-center">
         <img
@@ -150,55 +124,56 @@ const testimonials = [
 const HomePage = () => {
   const navigate = useNavigate();
   const settings = {
-        className: "testimonials",
-        infinite: true,
-        slidesToShow: 1,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        cssEase: "linear",
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-    
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    className: "testimonial",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+        }
+      }
+    ]
+  };
+
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
       <section className="relative bg-blue-900 text-white py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-0"></div>
-        {/* Abstract background pattern */}
-        <div className="absolute inset-0 opacity-10 z-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-        
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+        <video className='z-0 absolute bottom-10 md:top-10 md:right-10' src={heroIntro} loop autoPlay muted></video>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-block bg-amber-500 text-blue-900 font-bold px-4 py-1 rounded-full mb-6 text-xs uppercase tracking-wider">
+          <div className="max-w-3xl !z-10">
+            <div className="inline-block bg-amber-500 text-secondary font-bold px-4 py-1 rounded-full mb-6 text-xs uppercase tracking-wider">
               Trusted Security Experts
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-              Your Trusted Partner in <span className="text-amber-400">Security & Power</span> Solutions
+              Your Trusted Partner in <span className="text-primary">Security & Power</span> Solutions
             </h1>
             <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl" data-aos="zoom-in-right">
               From advanced CCTV surveillance and solar power systems to precision electronics repair. We secure your world and keep you powered up.
@@ -206,9 +181,6 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-primary normal-case self-start" onClick={() => navigate('/contact')} data-aos="flip-right">
                 Get a Free Quote
-              </Button>
-              <Button onClick={() => navigate('/ai-tools')} variant="ai" className="fle items-center justify-center gap-2 !hidden">
-                <Sparkles className="w-5 h-5" /> Try AI Assistant
               </Button>
             </div>
           </div>
@@ -237,26 +209,26 @@ const HomePage = () => {
       {/* Featured Services Preview */}
       <section className="py-20 bg-header">
         <div className="container mx-auto px-4">
-          <SectionHeader 
-            title="Our Core Services" 
+          <SectionHeader
+            title="Our Core Services"
             subtitle="We provide comprehensive technology solutions tailored for homes and businesses across the region."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 *:bg-back">
-            <ServiceCard 
-              icon={Camera} 
-              title="CCTV Installation" 
+            <ServiceCard
+              icon={Camera}
+              title="CCTV Installation"
               description="High-definition surveillance systems with remote viewing capabilities for homes and offices."
               onClick={() => navigate('/services')}
             />
-            <ServiceCard 
-              icon={Sun} 
-              title="Solar Power Systems" 
+            <ServiceCard
+              icon={Sun}
+              title="Solar Power Systems"
               description="Sustainable energy solutions including solar panels, inverters, and high-capacity batteries."
               onClick={() => navigate('/services')}
             />
-            <ServiceCard 
-              icon={MapPin} 
-              title="Car Tracking" 
+            <ServiceCard
+              icon={MapPin}
+              title="Car Tracking"
               description="Real-time GPS vehicle tracking with engine cut-off features and fleet management."
               onClick={() => navigate('/services')}
             />
@@ -269,32 +241,32 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Featured Services Preview */}
+      {/* Testimonial Section */}
       <section className="py-20 bg-back">
         <div className="container mx-auto px-4">
-          <SectionHeader 
-            title="What Our Clients Say" 
+          <SectionHeader
+            title="What Our Clients Say"
             subtitle="Discover how ATEKTECHNOLOGIES has empowered businesses and homes with reliable security and power solutions."
           />
           <div className='pt-5 slider-container'>
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className='p-3'>
-                <TestimonialCard
-                  name={testimonial.name}
-                  title={testimonial.title}
-                  quote={testimonial.quote}
-                  imageUrl={testimonial.imageUrl}
-                />
-            </div>
-          ))}
+                <div key={testimonial.id} className='p-3 sm:px-5'>
+                  <TestimonialCard
+                    name={testimonial.name}
+                    title={testimonial.title}
+                    quote={testimonial.quote}
+                    imageUrl={testimonial.imageUrl}
+                  />
+                </div>
+              ))}
             </Slider>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-[radial-gradient(circle_at_top_right,var(--tw-gradient-stops))] to-indigo-900 via-indigo-500  from-blue-700 to-100% text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2" data-aos="fade-right" data-aos-delay={300}>

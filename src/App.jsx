@@ -4,9 +4,7 @@ import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from 'react';
-import { LoadingComponent, NotFound } from "./ui/sections";
-// import { ToastContainer } from "react-toastify";
-//import About from "./pages/About";
+import { NotFound } from "./ui/sections";
 import useTheme from "./store/themeStore";
 import PublicRoute from "./routers/PublicRoute";
 import ServicesPage from "./pages/ServicesPage";
@@ -20,13 +18,6 @@ function App() {
   const { theme } = useTheme();
 
   useEffect(() => {
-   /* AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: false,
-      mirror: true,
-    });*/
-    
     AOS.init({
       once: false,
       mirror: true,
@@ -34,7 +25,7 @@ function App() {
       duration: 800,
       easing: "ease-in-out",
     });
-    
+
     AOS.refresh();
   }, []);
 

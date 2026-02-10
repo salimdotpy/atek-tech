@@ -1,33 +1,13 @@
-import { 
-  Shield, 
-  Camera, 
-  MapPin, 
-  Zap, 
-  Battery, 
-  Smartphone, 
-  Tv, 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  Map, 
-  CheckCircle,
-  Facebook,
-  Twitter,
-  Instagram,
-  ArrowRight,
-  Sun,
-  Flame,
-  Wrench,
-  Sparkles,
-  MessageSquare,
-  Send,
-  Loader,
-  Lightbulb,
-  AlertTriangle,
-  ClipboardList
-} from 'lucide-react';
 import { SectionHeader } from '@/ui/sections';
+import {
+  Camera,
+  Flame,
+  MapPin,
+  Phone,
+  Smartphone,
+  Sun,
+  Tv
+} from 'lucide-react';
 
 const ServicesPage = () => {
   const servicesList = [
@@ -72,14 +52,14 @@ const ServicesPage = () => {
   return (
     <div className="animate-fade-in pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <SectionHeader 
-          title="Our Services" 
+        <SectionHeader
+          title="Our Services"
           subtitle="Comprehensive security and technology solutions tailored to your specific needs."
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesList.map((service, idx) => (
-            <div key={idx} className="bg-header rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-fore" data-aos="fade-up" data-aos-delay={200}>
+            <div key={idx} className="bg-header rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-fore/10" data-aos="fade-up" data-aos-delay={200}>
               <div className="bg-secondary/90 p-6 flex justify-center">
                 <service.icon className="w-12 h-12 text-amber-400" />
               </div>
@@ -105,8 +85,8 @@ const ServicesPage = () => {
           <p className="text-secondary/80 text-lg mb-8 max-w-2xl mx-auto">
             Our team is ready to visit your site for a comprehensive assessment and free quotation.
           </p>
-          <a 
-            href="tel:+2349134377218" 
+          <a
+            href="tel:+2349134377218"
             className="inline-flex items-center justify-center px-8 py-3 bg-secondary text-white font-bold rounded-lg hover:bg-secondary/80 transition-colors"
           >
             <Phone className="w-5 h-5 mr-2" />

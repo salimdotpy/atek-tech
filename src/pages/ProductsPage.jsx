@@ -1,17 +1,16 @@
+import camera from '@/assets/camera.jpeg';
+import cases from '@/assets/cases.jpeg';
+import inverter from '@/assets/inverter.jpeg';
+import power from '@/assets/power.jpeg';
+import sensor from '@/assets/sensor.jpeg';
+import tracker from '@/assets/tracker.jpeg';
 import { SectionHeader } from '@/ui/sections';
-import { Camera, Battery } from 'lucide-react';
-import { Button, Avatar} from "@material-tailwind/react";
-import camera from '../assets/camera.jpeg';
-import sensor from '../assets/sensor.jpeg';
-import power from '../assets/power.jpeg';
-import inverter from '../assets/inverter.jpeg';
-import tracker from '../assets/tracker.jpeg';
-import cases from '../assets/cases.jpeg';
+import { Avatar, Button } from "@material-tailwind/react";
 
 const ProductsPage = () => {
   // Mock product data
   const products = [
-    { cat: "Security", name: "Hikvision 5MP Bullet Camera", price: "Call for Price", tag: "Best Seller", img: camera},
+    { cat: "Security", name: "Hikvision 5MP Bullet Camera", price: "Call for Price", tag: "Best Seller", img: camera },
     { cat: "Security", name: "Wireless Door/Window Sensor", price: "Affordable", tag: "New", img: sensor },
     { cat: "Power", name: "200Ah Tubular Battery", price: "High Durability", tag: "Hot", img: power },
     { cat: "Power", name: "5KVA Hybrid Inverter", price: "Premium", tag: "Warranty", img: inverter },
@@ -22,14 +21,14 @@ const ProductsPage = () => {
   return (
     <div className="animate-fade-in pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <SectionHeader 
-          title="Our Products" 
+        <SectionHeader
+          title="Our Products"
           subtitle="Top-quality equipment from world-renowned manufacturers."
         />
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {["All", "CCTV Cameras", "Solar & Batteries", "Car Trackers", "Accessories"].map((filter, idx) => (
-            <button 
+            <button
               key={idx}
               className={`px-6 py-2 rounded-full border-2 text-sm font-bold transition-colors ${idx === 0 ? 'bg-blue-900 border-fore text-fore' : 'border-fore/30 text-gray-600 hover:border-fore hover:text-fore'}`}
             >

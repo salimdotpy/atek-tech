@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 backup.txt
+transparent.mov
+video_bg_removal.py
+web_ready.mp4
+src/assets/hero-intro.mp4
+frames
