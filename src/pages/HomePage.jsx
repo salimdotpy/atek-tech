@@ -129,7 +129,7 @@ const HomePage = () => {
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     className: "testimonial",
